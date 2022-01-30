@@ -11,7 +11,7 @@ import Modal from './modal';
 export default function App() {
   const [cartItems, setCartItems] = useState([])
   const [showModal, setShowModal] = useState(false);
-  const [disable, setDisable] = useState(true);
+//  const [disable, setDisable] = useState(true);
 
   // { title: 'something' }
   const addToCart = item => {
@@ -54,7 +54,7 @@ export default function App() {
     setCartItems((oldCartItems) => {
       const results = oldCartItems.filter(d => {
         if(d.id === item.id) {
-          return setDisable(false);
+          return false;
         }
         return true;
       })
